@@ -1,0 +1,92 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161B22;
+    padding: 15px 31px;
+}
+.main-header-left{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 50px;
+}
+.github-logo{
+    width: 32px;
+}
+.header-searchbar{
+    margin-left: 16px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    padding: 0px 12px;
+    height: 28px;
+    border-radius: 5px;
+    width: 250px;
+}
+.header-searchbar::placeholder{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c9d1d9;
+}
+.header-searchbar:focus{
+    border: 1px solid #1f6feb;
+    outline: none;
+}
+.header-search-shash{
+    margin-left: -25px;
+}
+.main-header-left a{
+    white-space: nowrap;
+    margin-left: 16px;
+    color: #F0F6FC;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+}
+.main-header-left a:hover{
+    color: #b0b5ba;
+}
+
+.main-header-right{
+    display: flex;
+    align-items: center;
+    margin-right: -15px;
+}
+
+.main-header-right svg{
+    fill: white;
+}
+.main-header-right > *{
+    margin-right: 15px;
+}
+details summary{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+@media only screen and (max-width: 960px) {
+    .main-header-left a{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .main-header-right details{
+        display: none;
+    }
+    .header-searchbar,
+    .main-header-left svg{
+        display: none;
+    }
+    .main-header{
+        justify-content: center;
+    }
+    .github-logo{
+        margin-left: 50px;
+    }
+    .main-header-right {
+        position: absolute;
+        right: 10px;
+    }
+}
