@@ -66,7 +66,7 @@ export default function Home() {
 
             <div className='home-left'>
                 <div className='home-left-top'>
-                    <a><img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" height="20" width="20" data-view-component="true" />
+                    <a href='/'><img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" height="20" width="20" data-view-component="true" />
                     &nbsp;&nbsp;SarathAdhi&nbsp;<span className="dropdown-caret"></span></a>
                 </div>
                 <hr className='line1' />
@@ -84,33 +84,37 @@ export default function Home() {
                     {repos.map((element, index) => {
                         if(index<7){
                             return (
-                                <a href='' className='home-left-sub-repos'>
+                                <a href='/' className='home-left-sub-repos'>
                                     <img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" data-view-component="true" />
                                     {element}
                                 </a>
                             )
+                        }else{
+                            return null;
                         }
                     })}
                     <a className='show-more-btn'
                     onClick={() => {
                             setShowAllRepo(!showAllRepo);
+                            document.querySelector('.show-more-btn').style.display = 'none';
                         }
                     }
-                    href
+                    href='/'
                     >
                         Show more
                     </a>
                     {showAllRepo && repos.map((element, index) => {
                         if(index>7){
                             return (
-                                <a href='' className='home-left-sub-repos'>
+                                <a href='/' className='home-left-sub-repos'>
                                     <img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" data-view-component="true" />
                                     {element}
                                 </a>
                             )
+                        }else{
+                            return null;
                         }
-                        document.querySelector('.show-more-btn').style.display = 'none';
-                        document.querySelector('.home-left').style.overflowY = 'scroll';
+                        
                     })}
                 </div>
                 <hr className='line1' style={{marginTop: '5px'}}/>
@@ -130,12 +134,12 @@ export default function Home() {
                             return(
                                 <div className='home-activity'>
                                     <div className='home-activity-details-title'>
-                                        <img style={{borderRadius: '100%'}} src={element.url} size="20" width='30px' />
+                                        <img style={{borderRadius: '100%'}} src={element.url} size="20" width='30px' alt='' />
                                         <h4>{element.userName} started following you</h4>
                                         <p>{index+5} days ago</p>
                                     </div>
                                     <div className='home-activity-details'>
-                                        <img style={{borderRadius: '100%', marginRight: '10px'}} src={element.url} size="20" width='40px' />
+                                        <img style={{borderRadius: '100%', marginRight: '10px'}} src={element.url} size="20" width='40px' alt='' />
                                         <div>
                                             <div>
                                                 <h4>{element.userName}&emsp;</h4>
@@ -161,7 +165,7 @@ export default function Home() {
                             </svg>
                             <strong>&nbsp;ProTip!</strong>&nbsp;The feed shows you events from people you and repositories you watch or star.
                         </p>
-                        <a href=''>
+                        <a href='/'>
                             <p>
                                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="octicon octicon-rss mr-1">
                                     <path fillRule="evenodd" d="M2.002 2.725a.75.75 0 01.797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 11-1.497.098 10.502 10.502 0 00-9.776-9.776.75.75 0 01-.7-.798zM2 13a1 1 0 112 0 1 1 0 01-2 0zm.84-5.95a.75.75 0 00-.179 1.489c2.509.3 4.5 2.291 4.8 4.8a.75.75 0 101.49-.178A7.003 7.003 0 002.838 7.05z"></path>

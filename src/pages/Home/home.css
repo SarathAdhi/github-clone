@@ -19,6 +19,8 @@
     align-items: center;
     font-size: 14px;
     font-weight: 600;
+    text-decoration: none;
+    color: #C9D1D9;
 }
 .line1{
     margin-top: -14px;
