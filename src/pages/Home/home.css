@@ -94,6 +94,8 @@
     font-size: 12px;
     color: #8B949E;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 .show-more-btn:hover{
     color: #58a6ff;
