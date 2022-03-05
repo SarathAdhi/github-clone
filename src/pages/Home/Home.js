@@ -99,7 +99,6 @@ export default function Home() {
                             document.querySelector('.show-more-btn').style.display = 'none';
                         }
                     }
-                    href='/'
                     >
                         Show more
                     </a>
