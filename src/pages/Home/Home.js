@@ -106,7 +106,7 @@ export default function Home() {
                     {showAllRepo && repos.map((element, index) => {
                         if(index>7){
                             return (
-                                <a href='/' className='home-left-sub-repos'>
+                                <a className='home-left-sub-repos'>
                                     <img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" data-view-component="true" />
                                     {element}
                                 </a>
