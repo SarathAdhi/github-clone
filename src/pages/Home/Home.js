@@ -93,7 +93,7 @@ export default function Home() {
                             return null;
                         }
                     })}
-                    <a className='show-more-btn'
+                    <a href='#' className='show-more-btn'
                     onClick={() => {
                             setShowAllRepo(!showAllRepo);
                             document.querySelector('.show-more-btn').style.display = 'none';
