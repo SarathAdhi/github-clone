@@ -93,7 +93,7 @@ export default function Home() {
                             return null;
                         }
                     })}
-                    <a href='#' className='show-more-btn'
+                    <button className='show-more-btn'
                     onClick={() => {
                             setShowAllRepo(!showAllRepo);
                             document.querySelector('.show-more-btn').style.display = 'none';
@@ -101,11 +101,12 @@ export default function Home() {
                     }
                     >
                         Show more
-                    </a>
+                    </button>
+
                     {showAllRepo && repos.map((element, index) => {
                         if(index>7){
                             return (
-                                <a className='home-left-sub-repos'>
+                                <a href='/' className='home-left-sub-repos'>
                                     <img style={{borderRadius: '100%'}} src="https://avatars.githubusercontent.com/u/91727830" alt="@SarathAdhi" size="20" data-view-component="true" />
                                     {element}
                                 </a>
